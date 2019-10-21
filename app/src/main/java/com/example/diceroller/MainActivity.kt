@@ -18,17 +18,29 @@ class MainActivity : AppCompatActivity() {
         countUpButton.setOnClickListener { countUp() }
     }
 
-    private val randomInt = (1..6).random()
     private fun rollDice() {
+        val randomInt1 = (1..6).random()
+        val randomInt2 = (1..6).random()
+        val randomInt3 = (1..6).random()
+        val total = randomInt1 + randomInt2 + randomInt3
+
+        val resultText1: TextView = findViewById(R.id.first)
+        val resultText2: TextView = findViewById(R.id.second)
+        val resultText3: TextView = findViewById(R.id.third)
         val resultText: TextView = findViewById(R.id.result_text)
-        resultText.text = randomInt.toString()
+
+        resultText1.text = randomInt1.toString()
+        resultText2.text = randomInt2.toString()
+        resultText3.text = randomInt3.toString()
+        resultText.text = total.toString()
     }
 
     private fun countUp() {
-        val resultText: TextView = findViewById(R.id.result_text)
-        val num = randomInt + 1
 
-        if(num<7)
+        val resultText: TextView = findViewById(R.id.result_text)
+        val num = Integer.parseInt(resultText.text.toString()) + 1
+
+        if(num<19)
             resultText.text = num.toString()
     }
 }
