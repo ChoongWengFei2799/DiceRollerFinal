@@ -49,23 +49,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/dice_1" />
 
-    <TextView
-        android:id="@+id/first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/result_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dice_image2" />
 
     <TextView
         android:id="@+id/result_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="40dp"
         android:text="@string/app_name"
         android:textSize="30sp"
